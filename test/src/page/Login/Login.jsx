@@ -1,36 +1,34 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import "./Login.css"
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(''); // ใช้เก็บข้อความผิดพลาด
+  const navigate = useNavigate(); // ใช้ navigate เพื่อเปลี่ยนเส้นทาง
+
+  const correctUsername = "123";  // ชื่อผู้ใช้ที่ถูกต้อง
+  const correctPassword = "123";  // รหัสผ่านที่ถูกต้อง
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); // ป้องกันการ submit ฟอร์ม
 
-    // Basic validation
-    if (username && password) {
-      alert(`Logging in with Username: ${username}`);
-      // ส่งข้อมูลไปที่เซิร์ฟเวอร์ (ตัวอย่าง)
-      // fetch('/api/login', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ username, password }),
-      // });
+    // ตรวจสอบชื่อผู้ใช้และรหัสผ่าน
+    if (username === correctUsername && password === correctPassword) {
+      
+      navigate('/Home'); // นำทางไปที่หน้า Home เมื่อเข้าสู่ระบบสำเร็จ
     } else {
-      alert('Please fill in both fields.');
+      setError('Invalid username or password.'); // แสดงข้อความผิดพลาดเมื่อข้อมูลไม่ถูกต้อง
     }
   };
 
   return (
-    <div className="container">
+    <div className="login-container">
       <h1>Yamaha Social</h1>
-      <form id="loginForm" onSubmit={handleSubmit}>
+      <form id="login-Form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Username"
-          id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -38,21 +36,17 @@ function Login() {
         <input
           type="password"
           placeholder="Password"
-          id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Log In</button>
+        <button type="login-submit">Log In</button>
       </form>
-      <a href="#" className="forgot-password">
-        Forgot password?
-      </a>
-      <div className="footer">
-        <p>
-          Don't have an account? <a href="#">Sign up</a>
-        </p>
-      </div>
+
+      {/* ถ้ามีข้อผิดพลาดแสดงข้อความ */}
+      {error && <div style={{ color: 'red' }}>{error}</div>}
+
+      <a href="#" className="forgot-password">Forgot password?</a>
     </div>
   );
 }

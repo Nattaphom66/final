@@ -1,42 +1,66 @@
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .forgot-password,
-  .footer p {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  
+.login-container {
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* ทำให้ความกว้างของฟอร์มเหมาะสม */
+  text-align: center;
+}
+
+/* จัดระเบียบช่องกรอกข้อมูลให้เรียงกันแนวนอน */
+.login-form {
+  display: flex;
+  flex-direction: column; /* แนวตั้ง */
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between; /* ช่องกรอกข้อมูลให้มีระยะห่าง */
+  width: 100%;
+  gap: 10px; /* เพิ่มช่องว่างระหว่างช่องกรอกข้อมูล */
+}
+
+input {
+  width: 48%; /* ช่องกรอกข้อมูลแต่ละช่องจะมีความกว้างประมาณครึ่งหนึ่งของฟอร์ม */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
