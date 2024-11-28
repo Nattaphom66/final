@@ -1,6 +1,6 @@
 import "./Profile.css";
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function Profile() {
 
@@ -9,7 +9,9 @@ function Profile() {
       <div className="pro-head">
         <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <h1>Username</h1>
+        <Link to ={"/Login"}>
         <div className="bi bi-box-arrow-right" style={{ fontSize: "1.5rem" , color: "black"}}>&nbsp;</div>
+        </Link>
       </div>
 
       <div className="pro-pic">
