@@ -8,11 +8,12 @@ import Layout from "./layouts/layout/layout";
 import Profile from "./page/Profile/Profile";
 import Search from './page/Search/Search';
 import Newpost from "./page/Newpost/Newpost";
+import Event from "./page/Event/Event";
 import Chat from "./page/Chat/Chat";
 import Login from "./page/Login/login";
 
-import "./App.css";
 
+import "./App.css";
 const intTab = 'home';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path={'/Newpost'} element={<Newpost onAddPost={handleAddPost} />} />
             <Route path={'/Chat'} element={<Chat />} />
             <Route path={'/Login'} element={<Login />} />
+            <Route path={'/Event'} element={<Event />} />
           </Route>
         </Routes>
       </HashRouter> 
