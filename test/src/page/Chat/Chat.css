@@ -64,10 +64,6 @@
     font-size: 16px;
   }
   
-  button:hover {
-    background-color: #0056b3;
-  }
-  
   button:disabled {
     background-color: #d6d6d6;
     cursor: not-allowed;

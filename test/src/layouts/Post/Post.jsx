@@ -76,8 +76,6 @@ function Post({ post }) {
         ></i>
         <span>{comments.length}</span>
 
-        <i className="bi bi-send" style={{ fontSize: "1.25rem" }}></i>
-        <span>5</span>
       </div>
 
       <div className="post-description">
