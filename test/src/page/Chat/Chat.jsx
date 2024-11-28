@@ -66,6 +66,8 @@ function ChatPage() {
         >
           ส่ง
         </button>
+        <div>&nbsp</div>
+        
       </div>
     </div>
   );

@@ -29,16 +29,18 @@ const YamahaSearchPage = () => {
         <div className="row g-3">
           {/* Loop through items */}
           {[
-            '/public/2025-Yamaha-YZF-R1M-1.jpg',
-            '/public/67_03_28-New-Yamaha-MT-09-SP-by-Kwang-Tiny.jpg',
-            '/public/A1M_VN.jpg',
-            '/public/all-new-yamaha-xsr155-(11).jpg',
-            '/public/Yamaha-Tenere-700-Extreme-Edition.jpg',
-            '/public/Yamaha-YZF-R3-2024.jpg'
-          ].map((image, index) => (
+          '/2025-Yamaha-YZF-R1M-1.jpg',
+          '/67_03_28-New-Yamaha-MT-09-SP-by-Kwang-Tiny.jpg',
+          '/A1M_VN.jpg',
+          '/all-new-yamaha-xsr155-(11).jpg',
+          '/Yamaha-Tenere-700-Extreme-Edition.jpg',
+          '/Yamaha-YZF-R3-2024.jpg'
+          ]
+          .map((image, index) => (
             <div className="col-6 col-md-4" key={index}>
               <div className="grid-item">
-                <img src={`Images/${image}`} alt={`Image ${index + 1}`} className="img-fluid" />
+              <img src={image} alt={`Image ${index + 1}`} className="img-fluid" />
+
               </div>
             </div>
           ))}
