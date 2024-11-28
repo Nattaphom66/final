@@ -7,8 +7,8 @@ function Login() {
   const [error, setError] = useState(''); // ใช้เก็บข้อความผิดพลาด
   const navigate = useNavigate(); // ใช้ navigate เพื่อเปลี่ยนเส้นทาง
 
-  const correctUsername = "123";  // ชื่อผู้ใช้ที่ถูกต้อง
-  const correctPassword = "123";  // รหัสผ่านที่ถูกต้อง
+  const correctUsername = "user";  // ชื่อผู้ใช้ที่ถูกต้อง
+  const correctPassword = "pass";  // รหัสผ่านที่ถูกต้อง
 
   const handleSubmit = (event) => {
     event.preventDefault(); // ป้องกันการ submit ฟอร์ม
@@ -24,7 +24,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h1>Yamaha Social</h1>
+      <img src="/Yamaha-Motor-Company-Logo-1998-present.png" alt="" />
       <form id="login-Form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -46,7 +46,6 @@ function Login() {
       {/* ถ้ามีข้อผิดพลาดแสดงข้อความ */}
       {error && <div style={{ color: 'red' }}>{error}</div>}
 
-      <a href="#" className="forgot-password">Forgot password?</a>
     </div>
   );
 }
