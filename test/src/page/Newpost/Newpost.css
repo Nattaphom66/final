@@ -1,0 +1,10 @@
+.nawpost-head {
+    background-color: #737373;
+    color: white;
+    width: 100vw;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+}

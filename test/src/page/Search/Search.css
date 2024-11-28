@@ -1,0 +1,69 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin: 1rem;
+    position: relative;
+  }
+  
+  /* Grid Items */
+  .grid-item {
+    background-color: #e9ecef;
+    height: 100px;
+    border-radius: 8px;
+  }
+  
+  /* Popup Notification */
+  .notification-popup {
+    position: absolute;
+    top: 45px; /* Distance from the button */
+    right: 0; /* Align to the right side of the container */
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .notification-popup .popup-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .notification-popup ul {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .notification-popup ul li {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .notification-popup ul li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Grid Item Images */
+  .grid-item img {
+    width: 100%; /* Full width of the column */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover the space */
+  }
+  

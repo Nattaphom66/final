@@ -1,0 +1,41 @@
+.createpost{
+    color: white;
+    width: 100vw;
+    padding-left: 0%;
+    padding-top: 0.5rem;
+    margin-left: 0%;
+    justify-content: space-around;
+    align-items: center;
+    display: grid;
+}
+
+.enter-post{
+    justify-content: space-around;
+    align-items: center;
+    display: grid;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 คอลัมน์ที่มีขนาดเท่ากัน */
+    gap: 0.5rem; /* ระยะห่างระหว่างปุ่ม */
+    padding-bottom: 0.5rem;
+  }
+  
+  
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+  

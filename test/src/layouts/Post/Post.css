@@ -1,0 +1,217 @@
+/* post-username */
+.post-username{
+    width: 100vw;
+    height: 13vw;
+    background-color: #737373;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.post-username i{
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.post-username h1{
+    font-size: 2rem;
+}
+
+.post-username-in{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 5vw;
+    padding-left: 1rem;
+}
+
+.post-username .bi-three-dots-vertical {
+    margin-left: auto;
+    padding-left: 1rem;
+}
+
+
+/* IMG POST */
+.post-img img{
+    width: 100vw;
+}
+
+
+  /* post-interact */
+
+.post-interact{
+    background-color: #737373;
+    color: white;
+}
+.post-interact i{
+    margin: 0.5rem;
+    color: black;
+    font-size: 1.25rem; /* ขนาดเท่ากับไอคอนอื่น */
+    margin-right: 0.5rem; /* เพิ่มระยะระหว่างไอคอน */
+    vertical-align: middle; /* จัดแนวให้ไอคอนอยู่ตรงกลาง */
+    transition: color 0.3s ease, transform 0.2s ease; /* เพิ่มการเปลี่ยนแปลงที่ราบรื่น */
+}
+
+
+
+/* post-description */
+.post-description{
+    background-color: #5B5B5B;
+    color: white;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.post-description i {
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+  
+.post-description h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.post-commant{
+    width: 100vw;
+    background-color: aqua;
+}
+
+
+/* เลเยอร์พื้นหลังเบลอ */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+/* ป๊อปอัป */
+.post-popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: post-popup 0.2s ease-out;
+    width: 90%;
+    max-height: 80vh;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.popup-overlay.closing {
+    animation: fadeOut 0.3s ease-out forwards; /* อนิเมชันตอนปิด */
+}
+  
+@keyframes post-popup {
+    0% {
+        transform: translateX(-50%) scale(0);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+
+/* อนิเมชันตอนปิด */
+@keyframes popupClose {
+    from {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
+    }
+  }
+  
+  /* อนิเมชันเฟดเอาต์สำหรับพื้นหลังเบลอ */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+.post-popup-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.post-popup h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+  
+
+/* comments */
+
+
+/* ส่วนของการจัดการคอมเมนต์ */
+.comments-section {
+    height: 130vw; /* จำกัดความสูง */
+    overflow-y: auto; /* เลื่อนยาวเมื่อข้อความมาก */
+    padding: 10px;
+    background-color: #f9f9f9; /* พื้นหลังเบา ๆ */
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  /* รูปแบบของแต่ละคอมเมนต์ */
+  .comment-item {
+    display: flex;
+    align-items: center; /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    border-bottom: 1px solid #ddd; /* เส้นแบ่งระหว่างคอมเมนต์ */
+  }
+  
+  /* ไอคอนหรือรูปโปรไฟล์ */
+  .comment-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  /* ข้อความคอมเมนต์ */
+  .comment-item span {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+  }
+  
+  /* เพิ่มสไตล์สำหรับการ hover เมื่อเลื่อนเมาส์มาบนคอมเมนต์ */
+  .comment-item:hover {
+    background-color: #eaeaea; /* เปลี่ยนพื้นหลังเมื่อ hover */
+    cursor: pointer;
+  }
+  
