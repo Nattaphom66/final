@@ -8,6 +8,7 @@ import Layout from "./layouts/layout/layout";
 import Profile from "./page/Profile/Profile";
 import Search from './page/Search/Search';
 import Newpost from "./page/Newpost/Newpost";
+import Chat from "./page/Chat/Chat";
 
 import "./App.css";
 
@@ -37,6 +38,8 @@ function App() {
             <Route path={'/Profile'} element={<Profile />} />
             <Route path={'/Search'} element={<Search />} />
             <Route path={'/Newpost'} element={<Newpost onAddPost={handleAddPost} />} />
+            <Route path={'/Chat'} element={<Chat />} />
+            
           </Route>
         </Routes>
       </HashRouter> 
