@@ -35,7 +35,7 @@ function Footer({ tab, setTab }) {
           }}
         ></button>
       </Link>
-      <Link to={"/#"}>
+      <Link to={"/Event"}>
         <button
           className="bi bi-broadcast + button-clear"
           style={{ fontSize: "24px", color: "black" }}

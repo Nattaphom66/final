@@ -26,7 +26,7 @@ const YamahaSearchPage = () => {
 
       {/* Grid Layout */}
       <div className="container">
-        <div className="row g-3">
+        <div className="row g-4">
           {/* Loop through items */}
           {[
           '/2025-Yamaha-YZF-R1M-1.jpg',

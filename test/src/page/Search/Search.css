@@ -21,6 +21,7 @@ body {
     background-color: #e9ecef;
     height: 100px;
     border-radius: 8px;
+    margin-bottom: 90px; /* เพิ่มช่องว่างด้านล่าง */
   }
   
   /* Popup Notification */
