@@ -31,12 +31,7 @@ function ChatPage() {
     <div className="chat-container">
       <div className="chat-header">
         <h3>การสนทนา</h3>
-        <select 
-          value={selectedUser} 
-          onChange={(e) => setSelectedUser(e.target.value)}
-        >
-          <option value="John">John</option>
-        </select>
+
         <p>สนทนากับ: {selectedUser}</p>
       </div>
 

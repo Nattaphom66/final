@@ -42,7 +42,7 @@ function Story() {
       {isPopupOpen && (
         <div className="popup-overlay show" onClick={closePopup}>
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={closePopup}>×</button>
+            <button className="close-btn" onClick={closePopup}></button>
             <img src={popupImage} alt="Popup" />
           </div>
         </div>
