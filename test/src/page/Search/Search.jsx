@@ -1,5 +1,6 @@
 import React, { useState } from 'react'; // assuming you have styles.css for custom styles
-import "./Search.css"
+import "./Search.css";
+
 const YamahaSearchPage = () => {
   const [notificationVisible, setNotificationVisible] = useState(false);
   
@@ -13,45 +14,6 @@ const YamahaSearchPage = () => {
 
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar navbar-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img
-              src="/public/Yamaha-Motor-Company-Logo-1998-present.png"
-              alt="Yamaha Logo"
-              style={{ width: '100px' }}
-            />
-          </a>
-          <div className="d-flex position-relative justify-content-end">
-            {/* Notification Button */}
-            <button className="btn btn-outline-secondary me-2" id="notification-btn" onClick={toggleNotification}>
-              <i className="bi bi-bell"></i>
-            </button>
-            {/* Chat Button */}
-            <button className="btn btn-outline-secondary position-relative" id="chat-btn">
-              <i className="bi bi-chat-dots"></i>
-              <span className="badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                1
-              </span>
-            </button>
-          </div>
-
-          {/* Popup Notification */}
-          {notificationVisible && (
-            <div className="notification-popup shadow-sm" id="notification-popup">
-              <div className="popup-header">
-                <h6 className="mb-0">Notifications</h6>
-                <button className="btn-close btn-sm" id="close-popup" onClick={closeNotification}></button>
-              </div>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">New message received</li>
-              </ul>
-            </div>
-          )}
-        </div>
-      </nav>
-
       {/* Search Bar */}
       <div className="container">
         <div className="search-bar">
